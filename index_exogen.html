@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exogenesis - scientific evolution simulator project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="tooplate-stellaris-style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    
+<!--
+
+Tooplate 2140 Stellaris Research
+
+https://www.tooplate.com/view/2140-stellaris-research
+
+Free HTML CSS Template
+
+-->
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cosmic logo with planet and orbit -->
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="50" cy="50" r="20" fill="none" stroke="#f59e0b" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="12" fill="#7c3aed"/>
+                    
+                    <!-- Orbiting elements -->
+                    <circle cx="85" cy="50" r="4" fill="#f59e0b">
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="8s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="15" cy="50" r="3" fill="#ec4899">
+                        <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="-360 50 50" dur="12s" repeatCount="indefinite"/>
+                    </circle>
+                    
+                    <!-- Central glow -->
+                    <circle cx="50" cy="50" r="8" fill="#f59e0b" opacity="0.3"/>
+                </svg>
+                <span class="logo-text">EXOGENESIS</span>
+            </a>
+            
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">MAIN</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#missions">STAGES</a></li>
+                    <li><a href="#equipment">PLANS</a></li>
+                    <li><a href="#contact">COMMUNITY</a></li>
+                    <li><a href="#screenshots">SCREENSHOTS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+    <!-- Star layers -->
+    <div class="stars-layer"></div>
+    
+    <!-- Floating space orbs -->
+    <div class="space-orb"></div>
+    <div class="space-orb"></div>
+    <div class="space-orb"></div>
+    <div class="space-orb"></div>
+    
+    <!-- Shooting stars -->
+    <div class="shooting-star" style="--delay: 0s; --top: 10%; --left: 10%;"></div>
+    <div class="shooting-star" style="--delay: 1.5s; --top: 30%; --left: 60%;"></div>
+    <div class="shooting-star" style="--delay: 3s; --top: 20%; --left: 80%;"></div>
+    <div class="shooting-star" style="--delay: 4.5s; --top: 60%; --left: 30%;"></div>
+    <div class="shooting-star" style="--delay: 6s; --top: 80%; --left: 70%;"></div>
+    
+        <div class="hero-content">
+            <h1 class="cosmic-title">Exogenesis</h1>
+            <p class="subtitle">A multi-stage evolution simulator project</p>
+        </div>
+        <a class="small_link" style="left:30%" href="https://albidosorum.itch.io/exogenesis-omnicosm">Try the Game</a>
+        <a class="small_link" style="left:70%" href="https://discord.gg/3MBzEUra6T">Discord Server</a>
+        <a href="#about" class="scroll-btn">
+            <div class="scroll-btn-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+            </div>
+        </a>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About the project</h2>
+        <div class="about-section">
+            <div class="about-hero">
+                <h3>Prototyping a scientifically accurate evolution game</h3>
+                <p class="about-description">
+                    Exogenesis is a project found by <i>Quintessence</i>, where the player takes a role of a small life organism, and guides its species 
+                    through billions of years of evolution, changing and transforming, until reaching sapience, building society, and finally, grasping cosmos.
+                    Decisions, changes and fate of the species are decided only by the player. And with this freedom, comes the responsibility - the final result is also only up to you.<br><br>
+                    Exogenesis is yet in an active prototype development state, but already has playable prototypes of several stages and lots of plans on development in near future.<br>
+                </p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h4 style="color:rgb(162, 65, 236)">Scientific accuracy, but with an interesting approach</h4>
+                    <p>Exogenesis tries to keep things relatively simple and very interesting, while maintaining scientifically accurate educational gameplay.</p>
+                </div>
+                
+                <div class="about-card">
+                    <h4 style="color:rgb(128, 206, 164)">Procedural generation</h4>
+                    <p>Randomised worlds, lots of opportunities for role-playing, infinite configurations. The idea of the game is to offer as much as possible to anyone who loves not only playing, but diving into it.</p>
+                </div>
+
+                <div class="about-card">
+                    <h4>Stable updates</h4>
+                    <p>Maybe not really fast, but the game is updated regularly, Quintessence will always work on this project till he dies. </p>
+                </div>
+                
+                <div class="about-card">
+                    <h4 style="color:rgb(49, 223, 58)">Community ideas</h4>
+                    <p>Ambitious and unique ideas are always welcomed, Quintessence really likes the power of community. <br> <b>Anyone</b> can become a developer; the help is always welcomed!</p>
+                </div>
+                <div class="about-card">
+                    <h4 style="color:rgb(223, 49, 90)">Always original</h4>
+                    <p>Whatever form the game has, no matter how it looks, it will always remain original first. Innovative ideas and new approaches to Spore-likes is one of the core principles.</p>
+                </div>
+                <div class="about-card">
+                    <h4 style="color:rgb(83, 93, 200)">No AI. No money spent.</h4>
+                    <p>The budget of the project is Quintessence's personal insanity, and the help of anyone who will offer their support! And even in such state, no AI-generated assets will ever be used in the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="missions" class="missions-section fade-in">
+        <div class="missions-container">
+            <h2 class="section-title">STAGES</h2>
+            
+            <div class="mission-tabs">
+                <button class="mission-tab active" data-tab="cell">Microbiological</button>
+                <button class="mission-tab" data-tab="aquatic">Aquatic</button>
+                <button class="mission-tab" data-tab="creature">Animal</button>
+                <button class="mission-tab" data-tab="tribal">Prehistoric</button>
+                <button class="mission-tab" data-tab="civ">Civilisation</button>
+                <button class="mission-tab" data-tab="industrial">Industrial</button>
+                <button class="mission-tab" data-tab="space">Interstellar</button>
+            </div>
+            
+            <div class="mission-content active" id="cell">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Choose an origin of life</h4>
+                        <p>Life can begin in many ways; like Exogenesis - where the life is brought by a cosmic meteor - or Abiogenesis, where the life on your planet slowly evolved from simple chemical compounds.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Survive as a cell</h4>
+                        <p>Collect nutrients, complete tasks, avoiding dangerous environments and migrating into different regions. Evolve to adapt to your surroundings better, and progress towards becoming multicellular life.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Fight for your life</h4>
+                        <p>Interact with other cells - randomly generated or pre-made organisms populating your planet. Some of them are peaceful and passive, some are just seeking for nutrients, and some will attack and eat you.</p>
+                    </div>
+                    <div class="mission-card">
+                        <img src="Cell Exogen 2.png" width="460px" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-content" id="aquatic">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Explore the underwater world</h4>
+                        <p>Who knows what awaits? Gigantic monsters? Lifeless marine void? The ocean is discovered only by 0.001%.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Survive as an aquatic creature</h4>
+                        <p>Find and eat nutrients, or maybe other forms of aquatic life. Migrate to new regions in search of better life.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Stay in the water if you want</h4>
+                        <p>And when you evolve enough to leave the water, you can refuse. Stay back here, relax, and lead your species to sapience underwater.<small>(Yes, smeltal the meltal)</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-content" id="creature">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Gain experience</h4>
+                        <p>Your creature is a separate individual, who ages and gains experience from performing certain actions and tasks. The more experience - the stronger and more valuable it is.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Find best evolutionary path</h4>
+                        <p>You have a lot of evolutionary traits to choose from; each is a different path, affecting the gameplay in all possible ways. What is the best one?</p>
+                    </div>
+                    <div class="mission-card">
+                        <img src="creature exogen 2.png" width="460px" alt="">
+                    </div>
+                    <div class="mission-card">
+                        <h4>Absolute customisation</h4>
+                        <p>You can edit external and internal organs of your creature, adding as much detail as you want. Evolutionary law is your only enemy - putting three brains into your creature won't give it thrice the intelligence.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-content" id="tribal">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Organise your tribe</h4>
+                        <p>Turn your small settlement into a big neolithic city, seek and extract resources in all parts of the world, produce and trade unique goods.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Control each individual separately</h4>
+                        <p>Each tribe member has their own inventory, personal traits and tools. You need to take care of all of them, and they will lead you to victory.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Research technologies</h4>
+                        <p>Advance your technique, teach yourself new ways to produce weapons, build better buildings and create a utopian society. You only need to come through 3 substrages: <i>Mesolithic, Paleolithic and Neolithic.</i></p>
+                    </div>
+                        <div class="mission-card">
+                        <h4>Develop unique culture</h4>
+                        <p>Each tribe has its own unique culture and genetics, that define its appearance and traditions. Some of them are good fishermen, some are excellent hunters, and some, maybe, love to live in the mountains.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-content" id="civ">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Rule a whole civilisation</h4>
+                        <p>Advance through 3 substages, covering Metal Age, Middle Ages and Exploration Age; control resources, build cities, castles and villages, trade and ally with other countries, maintain your diplomatic policy. </p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Command gigantic armies</h4>
+                        <p>You now command whole armies with lots of proffesional soldiers and knights in them on the battlefield. Equip them with custom weapon and armour, develop your own strategy and win the enemy through quality or quantity.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Decide your ideology and policy</h4>
+                        <p>A kingdom or a republic? A country that values religion or science? A country that believes in dominance of its own culture? Traditions and policies of your people are for you to decide and develop.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-content" id="industrial">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>Step into idustrialisation!</h4>
+                        <p>Go through 3 substages of industrial society: Industrial, Post-Industrial and Futuristic (Metaindustrial). You now have factories to build, a whole new social class to care about, political changes and unstoppable technological progress that can ruin your civilisation. Will your planet unite?</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Lead vehicles and machines into the battle</h4>
+                        <p>Your armies are now using vehicles like tanks or airplanes, and your armies no longer use any armour or engage in close-melee combat.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Touch the stars</h4>
+                        <p>Post-Industrial society is no longer totally bound to its home planet. You can launch satellites, visit your moon (if you have it) or start colonising whole new planets. But yet, only inside your solar system, constantly racing with other countries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-content" id="space">
+                <div class="mission-grid">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <h4>A whole interstellar empire</h4>
+                        <p>Congratulations on uniting your planet! You now travel between the stars with whatever technology you discovered, and control every single ship, giving commands in a grand-strategy form.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Colonise and observe new planets</h4>
+                        <p>Exploit the resources of distant planets, find and settle habitable worlds, and each one of them can be viewed by you - every small settlement and landscape detail. See how your empire works in real time, build and shape cities.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h4>Galactic diplomacy</h4>
+                        <p>Of course your species always knew you were not alone in this universe. Other empires are your rivals - or maybe you'll be able to turn them into your allies through masterful diplomacy?</p>
+                    </div>
+                        <div class="mission-card">
+                        <h4>A godlike ascension</h4>
+                        <p>No, the story doesn't end here. The science will progress eternally - into building Megastructures, travelling other galaxies, modifying your species into something completely new and starting new life. Or maybe, you would want to escape into simulation? Or give yourself extraordinary psychic powers, that connect with different dimensions?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipment" class="fade-in">
+        <h2 class="section-title">PLANS</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-number">Q1 2027</div>
+                    <div class="achievement-label"><b>●Both stages trait tree overhaul</b><br><b>●Planet landscape generator</b><br><b>●Playable creature stage</b><br></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">Q2 2027</div>
+                    <div class="achievement-label"><b>●Plant editor</b><br><b>●Creature body sculpting</b></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">Q3 2027</div>
+                    <div class="achievement-label"><b>●Custom creature part editor</b></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">Q4 2027</div>
+                    <div class="achievement-label"><b>●Early playable tribe stage prototypes<br>●Enhanced planet and resource generation</b></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">2028</div>
+                    <div class="achievement-label"><b>●Early aquatic stage prototype?</b></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">2028</div>
+                    <div class="achievement-label"><b>●Early civilisation prototype?</b></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">2029</div>
+                    <div class="achievement-label"><b>●Industrial prototype?</b></div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">2030</div>
+                    <div class="achievement-label"><b>● Interstellar prototype?</b></div>
+                </div>
+            </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">COMMUNITY</h2>
+    <div class="about-section">
+            <div class="about-hero">
+                <h3>Seeking for help and interested people</h3>
+                <p class="about-description">
+                    Exogenesis has a dedicated community across several platforms. And we are always seeking the opportunity to grow - anyone who is interested, wants to share or ask something is always welcomed.<br><br>
+            But most importantly, we need developers. People who are willing to help in their free time, people who have at least slightest knowledge in fields like programming, 3D/2D art and design, animation, music composing,
+            or scientific knowledge in areas like physics, biology, sociology, anthropology or totally any relevant science.<br><br>
+            Another important group of people - thinkers. If you have ideas to share, we have a special place on our Discord server dedicated specifically for sharing your ideas. The project is centred around innovational and creative 
+            decisions, so in our community the importance of this role cannot be underestimated.<br><br>
+            Our only official socials are listed below:
+                </p>
+            </div>
+    </div>
+        <a class="link_button" href="https://discord.gg/3MBzEUra6T">Discord Server</a><br>
+        <a class="link_reddit" style="left:15%" style="bottom: -35px;" style="background: blue;" href="https://www.reddit.com/r/ExogenesisGame/">Subreddit</a>
+        <a class="link_youtube" style="left:85%" style="bottom: -125px;" href="https://www.youtube.com/@EdarnonnBrodie">YouTube</a><br>
+    </div>
+    </section>
+
+    <section id="screenshots" class="fade-in">
+        <h2 class="section-title">SCREENSHOTS</h2>
+        <img class="basic_image" src="exogen3.png" width="700px" alt="aaa">
+        <figcaption style="text-align: center;>Planet generator prototype</figcaption>
+        <img src="exogen2.png" width="700px" alt="">
+        <figcaption>Planet generator prototype</figcaption>
+        <img class="basic_image" src="exogen1.jpg" width="700px" alt="">
+        <figcaption>Planet relief in the generator prototype</figcaption>
+        <img class="basic_image" src="Cell Exogen 2.png" width="700px" alt="">
+        <figcaption>Cell stage gameplay</figcaption>
+        <img class="basic_image" src="creature exogen 2.png" width="700px" alt="">
+        <figcaption>Creature being edited</figcaption>
+        <img class="basic_image" src="Cell Exogen 3.png" width="700px" alt="">
+        <figcaption>An advanced microorganism wandering around in the Cell stage</figcaption>
+        <img class="basic_image" src="exogen4.png" width="700px" alt="">
+        <figcaption>Creature organ editor testing</figcaption>
+        <img class="basic_image" src="exogen5.png" width="700px" alt="">
+        <figcaption>Cell being edited</figcaption>
+        <img class="basic_image" src="exogen6.png" width="700px" alt="">
+        <figcaption>The Vivarium - place where all your previous creations are stored</figcaption>
+        <img class="basic_image" src="exogen7.png" width="700px" alt="">
+        <figcaption>Main menu</figcaption>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Order of Exogenesis</a></p>
+        </div>
+    </footer>
+<script src="tooplate-stellaris-script.js"></script>
+</body>
+</html>
